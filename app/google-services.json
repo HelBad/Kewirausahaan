@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "958351262829",
+    "firebase_url": "https://kewirausahaan-ae818.firebaseio.com",
+    "project_id": "kewirausahaan-ae818",
+    "storage_bucket": "kewirausahaan-ae818.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958351262829:android:d4dd3757eb723918fc2b64",
+        "android_client_info": {
+          "package_name": "com.example.kewirausahaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958351262829-n178sagnfc9iktm9fqfemkbdjc8dvbt3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwjs6fupL3YzoTs5TmTN3Hu-jIaPGMaaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958351262829-n178sagnfc9iktm9fqfemkbdjc8dvbt3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
