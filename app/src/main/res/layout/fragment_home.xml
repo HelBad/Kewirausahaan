@@ -46,10 +46,11 @@
                     android:src="@drawable/home_menu1"/>
             </androidx.cardview.widget.CardView>
             <TextView
+                android:id="@+id/jenisArmada1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Kendaraan 1"
+                android:text="Mobil"
                 android:textAlignment="center"
                 android:textSize="12sp"
                 android:textColor="#666666">
@@ -77,10 +78,11 @@
                     android:src="@drawable/home_menu1"/>
             </androidx.cardview.widget.CardView>
             <TextView
+                android:id="@+id/jenisArmada2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Kendaraan 2"
+                android:text="Bus Besar"
                 android:textAlignment="center"
                 android:textSize="12sp"
                 android:textColor="#666666">

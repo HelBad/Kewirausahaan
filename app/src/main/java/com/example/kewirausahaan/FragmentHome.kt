@@ -14,7 +14,7 @@ class FragmentHome : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -22,11 +22,13 @@ class FragmentHome : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         menuHome1.setOnClickListener {
-            val intent = Intent(activity, ActivityList::class.java)
+            val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada1.text.toString())
             startActivity(intent)
         }
         menuHome2.setOnClickListener {
-            val intent = Intent(activity, ActivityList::class.java)
+            val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada2.text.toString())
             startActivity(intent)
         }
         menuHome3.setOnClickListener {
