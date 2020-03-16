@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityKontak">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarKontak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+        <TextView
+            android:id="@+id/textbarArmada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Kendaraan"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarKontak"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textContactus"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Kontak Kami"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textContactus"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#dddddd"/>
+
+            <ImageView
+                android:id="@+id/logoSimti"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/textContactus"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/home_menu1"/>
+
+            <TextView
+                android:id="@+id/forwardKontak"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/logoSimti"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Forward Together"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/alamat1Kontak"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_below="@id/forwardKontak"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Jl. Ketintang, Ketintang,"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/alamat2Kontak"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_below="@id/alamat1Kontak"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Kec. Gayungan, Kota SBY"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/alamat3Kontak"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_below="@id/alamat2Kontak"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Jawa Timur 60231"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/followKontak"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/alamat3Kontak"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Follow Us"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iconEmailKontak"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/followKontak"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_email"/>
+
+            <TextView
+                android:id="@+id/emailKontak"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_below="@id/followKontak"
+                android:layout_toRightOf="@id/iconEmailKontak"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:text="agenttravel@gmail.com"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/iconHpKontak"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/iconEmailKontak"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_panggilan"/>
+
+            <TextView
+                android:id="@+id/hpKontak"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_below="@id/emailKontak"
+                android:layout_toRightOf="@id/iconHpKontak"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:text="+62 812-3456-7890"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

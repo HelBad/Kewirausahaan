@@ -50,7 +50,7 @@ class ActivityLogin : AppCompatActivity(), View.OnClickListener {
                         if (usersBean!!.password.equals(textPassword.text.toString().trim()))
                         {
                             val intent = Intent(applicationContext, ActivityMain::class.java)
-                            intent.putExtra("email", textUsername.text.toString())
+                            intent.putExtra("username", textUsername.text.toString())
                             startActivity(intent)
                         }
                         else
