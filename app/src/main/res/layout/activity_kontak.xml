@@ -13,11 +13,10 @@
         android:background="@color/colorPrimaryDark"
         android:minHeight="?attr/actionBarSize">
         <TextView
-            android:id="@+id/textbarArmada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:text="Kendaraan"
+            android:text="Kontak"
             android:textColor="@android:color/black"
             android:textSize="20dp"/>
     </androidx.appcompat.widget.Toolbar>
@@ -54,7 +53,7 @@
                 android:background="#dddddd"/>
 
             <ImageView
-                android:id="@+id/logoSimti"
+                android:id="@+id/logoTravel"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_below="@id/textContactus"
@@ -62,13 +61,13 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:src="@drawable/home_menu1"/>
+                android:src="@drawable/logo_travel"/>
 
             <TextView
                 android:id="@+id/forwardKontak"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_below="@id/logoSimti"
+                android:layout_below="@id/logoTravel"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"

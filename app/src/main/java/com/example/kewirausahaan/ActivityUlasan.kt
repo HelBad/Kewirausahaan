@@ -24,17 +24,13 @@ class ActivityUlasan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ulasan)
 
-        btnBack.setOnClickListener {
-            finish()
-        }
-
         textNama = findViewById(R.id.textNama) as TextView
         textEmail = findViewById(R.id.textEmail) as TextView
         btnUlas = findViewById(R.id.btnUlas) as Button
         inputUlasan = findViewById(R.id.inputUlasan) as EditText
 
         databaseReference = FirebaseDatabase.getInstance().getReference()
-        val query = databaseReference.child("mhs").orderByChild("nama").equalTo(intent.getStringExtra("nama"))
+        val query = databaseReference.child("Pengguna").orderByChild("nama").equalTo(intent.getStringExtra("nama"))
         query.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(datasnapshot: DataSnapshot) {
                 if (datasnapshot != null)
@@ -43,14 +39,14 @@ class ActivityUlasan : AppCompatActivity() {
                     {
                         val allocation = snapshot1.getValue(Akun::class.java)
                         textNama.setText(allocation!!.nama)
-                        textEmail.setText(allocation!!.email)
+                        textEmail.setText(allocation!!.username)
                     }
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {}
         })
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("ulasan")
+        databaseReference = FirebaseDatabase.getInstance().getReference("Ulasan")
         btnUlas.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view:View) {
                 addData()

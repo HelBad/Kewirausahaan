@@ -53,7 +53,7 @@
         android:layout_below="@id/namaAkun"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/gambarProfil"
-        android:text="Masuk dengan Email UNESA"
+        android:text="Masuk dengan Email Agent Travel"
         android:textSize="15sp"
         android:textStyle="bold"/>
 

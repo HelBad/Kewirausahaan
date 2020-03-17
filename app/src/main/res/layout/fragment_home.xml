@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Bus Besar"
+                android:text="BusBesarHDD"
                 android:textAlignment="center"
                 android:textSize="12sp"
                 android:textColor="#666666">
