@@ -24,6 +24,10 @@
         <activity android:name=".ActivityTentang" />
         <activity android:name=".ActivityKontak" />
         <activity android:name=".ActivityUlasan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
