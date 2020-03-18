@@ -33,26 +33,32 @@ class FragmentHome : Fragment() {
         }
         menuHome3.setOnClickListener {
             val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada3.text.toString())
             startActivity(intent)
         }
         menuHome4.setOnClickListener {
             val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada4.text.toString())
             startActivity(intent)
         }
         menuHome5.setOnClickListener {
             val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada5.text.toString())
             startActivity(intent)
         }
         menuHome6.setOnClickListener {
             val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada6.text.toString())
             startActivity(intent)
         }
         menuHome7.setOnClickListener {
             val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada7.text.toString())
             startActivity(intent)
         }
         menuHome8.setOnClickListener {
             val intent = Intent(activity, ActivityArmada::class.java)
+            intent.putExtra("jenis", jenisArmada8.text.toString())
             startActivity(intent)
         }
 
