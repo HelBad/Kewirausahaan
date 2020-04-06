@@ -58,7 +58,7 @@ class FragmentAkun : Fragment() {
                 .setCancelable(false)
                 .setPositiveButton("YA", object: DialogInterface.OnClickListener {
                     override fun onClick(dialog:DialogInterface, id:Int) {
-                        val intent = Intent(activity, ActivityLogin::class.java)
+                        val intent = Intent(activity, ActivitySignin::class.java)
                         startActivity(intent)
                     }
                 })
@@ -72,7 +72,7 @@ class FragmentAkun : Fragment() {
         textNama = view!!.findViewById<View>(R.id.namaAkun) as TextView
         imgAkun = view!!.findViewById<View>(R.id.imgAkun) as ImageView
         databaseReference = FirebaseDatabase.getInstance().getReference()
-        val query = databaseReference.child("Pengguna").orderByChild("username").equalTo(activity!!.intent.getStringExtra("username"))
+        val query = databaseReference.child("Pengguna").orderByChild("email").equalTo(activity!!.intent.getStringExtra("email"))
         query.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(datasnapshot: DataSnapshot) {
                 if (datasnapshot != null)

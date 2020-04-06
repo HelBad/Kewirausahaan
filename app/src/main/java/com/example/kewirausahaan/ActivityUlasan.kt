@@ -39,7 +39,7 @@ class ActivityUlasan : AppCompatActivity() {
                     {
                         val allocation = snapshot1.getValue(Akun::class.java)
                         textNama.setText(allocation!!.nama)
-                        textEmail.setText(allocation!!.username)
+                        textEmail.setText(allocation!!.email)
                     }
                 }
             }
