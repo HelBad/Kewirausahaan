@@ -24,6 +24,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginHorizontal="10dp"
         android:layout_below="@id/toolbarHome">
+
         <LinearLayout
             android:id="@+id/menuHome1"
             android:layout_width="0dp"
@@ -235,8 +236,9 @@
             android:id="@+id/menuHome7"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_weight="1"
             android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:addStatesFromChildren="true"
             android:orientation="vertical">
             <androidx.cardview.widget.CardView
                 app:cardCornerRadius="30dp"
