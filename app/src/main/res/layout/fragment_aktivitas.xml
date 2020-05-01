@@ -8,7 +8,7 @@
     tools:context=".FragmentAktivitas">
 
     <androidx.appcompat.widget.Toolbar
-        app:title="@string/app_name"
+        app:title="Shikat Travel Car"
         android:id="@+id/toolbarAktivitas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -82,7 +82,7 @@ class ActivityArmada : AppCompatActivity() {
             firebaseSearchQuery
         ) {
             override fun populateViewHolder(viewHolder:ViewHolder, model:ListArmada, position:Int) {
-                viewHolder.setDetails(getApplicationContext(), model.tipe, model.tahun, model.cc, model.deskripsi, model.gambar1, model.gambar2)
+                viewHolder.setDetails(getApplicationContext(), model.tipe, model.tahun, model.jumlah, model.deskripsi, model.gambar1, model.gambar2)
             }
             override fun onCreateViewHolder(parent: ViewGroup, viewType:Int):ViewHolder {
                 val viewHolder = super.onCreateViewHolder(parent, viewType)
@@ -90,32 +90,11 @@ class ActivityArmada : AppCompatActivity() {
                     override fun onItemClick(view:View, position:Int) {
 
                         val tipeArmada = view.findViewById(R.id.tipeArmada) as TextView
-                        val tahunArmada = view.findViewById(R.id.tahunArmada) as TextView
-                        val ccArmada = view.findViewById(R.id.ccArmada) as TextView
-                        val deskripsiArmada = view.findViewById(R.id.deskripsiArmada) as TextView
-                        val gambar1Armada = view.findViewById(R.id.gambar1Armada) as ImageView
-                        val gambar2Armada = view.findViewById(R.id.gambar2Armada) as ImageView
-
-                        val tipeA = tipeArmada.getText().toString()
-                        val tahunA = tahunArmada.getText().toString()
-                        val ccA = ccArmada.getText().toString()
-                        val deskripsiA = deskripsiArmada.getText().toString()
-                        val gambar1A = gambar1Armada.getDrawable()
-                        val bitmap1A = (gambar1A as BitmapDrawable).getBitmap()
-                        val gambar2A = gambar2Armada.getDrawable()
-                        val bitmap2A = (gambar2A as BitmapDrawable).getBitmap()
-
-                        val intent = Intent(view.getContext(), ActivityDetail::class.java)
-                        val stream = ByteArrayOutputStream()
-                        bitmap1A.compress(Bitmap.CompressFormat.PNG, 100, stream)
-                        bitmap2A.compress(Bitmap.CompressFormat.PNG, 100, stream)
-                        val bytes = stream.toByteArray()
-                        intent.putExtra("gambar1", bytes)
-                        intent.putExtra("gambar2", bytes)
+                        val tipeA = tipeArmada.text.toString()
+                        val jenisA = textbarArmada.text.toString()
+                        val intent = Intent(view.getContext(), ActivityPemesanan::class.java)
                         intent.putExtra("tipe", tipeA)
-                        intent.putExtra("tahun", tahunA)
-                        intent.putExtra("cc", ccA)
-                        intent.putExtra("deskripsi", deskripsiA)
+                        intent.putExtra("jenis",jenisA)
                         startActivity(intent)
                     }
                     override fun onItemLongClick(view:View, position:Int) {
@@ -139,7 +118,7 @@ class ActivityArmada : AppCompatActivity() {
             query
         ) {
             override fun populateViewHolder(viewHolder:ViewHolder, model:ListArmada, position:Int) {
-                viewHolder.setDetails(getApplicationContext(), model.tipe, model.tahun, model.cc, model.deskripsi, model.gambar1, model.gambar2)
+                viewHolder.setDetails(getApplicationContext(), model.tipe, model.tahun, model.jumlah, model.deskripsi, model.gambar1, model.gambar2)
             }
             override fun onCreateViewHolder(parent:ViewGroup, viewType:Int):ViewHolder {
                 val viewHolder = super.onCreateViewHolder(parent, viewType)
@@ -147,32 +126,11 @@ class ActivityArmada : AppCompatActivity() {
                     override fun onItemClick(view:View, position:Int) {
 
                         val tipeArmada = view.findViewById(R.id.tipeArmada) as TextView
-                        val tahunArmada = view.findViewById(R.id.tahunArmada) as TextView
-                        val ccArmada = view.findViewById(R.id.ccArmada) as TextView
-                        val deskripsiArmada = view.findViewById(R.id.deskripsiArmada) as TextView
-                        val gambar1Armada = view.findViewById(R.id.gambar1Armada) as ImageView
-                        val gambar2Armada = view.findViewById(R.id.gambar2Armada) as ImageView
-
-                        val tipeA = tipeArmada.getText().toString()
-                        val tahunA = tahunArmada.getText().toString()
-                        val ccA = ccArmada.getText().toString()
-                        val deskripsiA = deskripsiArmada.getText().toString()
-                        val gambar1A = gambar1Armada.getDrawable()
-                        val bitmap1A = (gambar1A as BitmapDrawable).getBitmap()
-                        val gambar2A = gambar2Armada.getDrawable()
-                        val bitmap2A = (gambar2A as BitmapDrawable).getBitmap()
-
-                        val intent = Intent(view.getContext(), ActivityDetail::class.java)
-                        val stream = ByteArrayOutputStream()
-                        bitmap1A.compress(Bitmap.CompressFormat.PNG, 100, stream)
-                        bitmap2A.compress(Bitmap.CompressFormat.PNG, 100, stream)
-                        val bytes = stream.toByteArray()
-                        intent.putExtra("gambar1", bytes)
-                        intent.putExtra("gambar2", bytes)
+                        val tipeA = tipeArmada.text.toString()
+                        val jenisA = textbarArmada.text.toString()
+                        val intent = Intent(view.getContext(), ActivityPemesanan::class.java)
                         intent.putExtra("tipe", tipeA)
-                        intent.putExtra("tahun", tahunA)
-                        intent.putExtra("cc", ccA)
-                        intent.putExtra("deskripsi", deskripsiA)
+                        intent.putExtra("jenis",jenisA)
                         startActivity(intent)
                     }
                     override fun onItemLongClick(view:View, position:Int) {

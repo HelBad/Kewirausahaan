@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPemesanan">
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Konfirmasi Pemesanan"
+        android:id="@+id/toolbarPemesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/toolbarPemesanan"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/textRingkasan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarPemesanan"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/amethysta"
+        android:text="Ringkasan Rental"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="5dp"
+        android:id="@+id/cardRincian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/textRingkasan">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/gambarAPemesanan"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/home_menu5"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tipeAPemesanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/amethysta"
+                            android:gravity="center_vertical"
+                            android:text="Daihatsu Sigra"
+                            android:textColor="#F80542AA"
+                            android:textStyle="bold"
+                            tools:layout_editor_absoluteX="133dp"
+                            tools:layout_editor_absoluteY="110dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:fontFamily="@font/amethysta"
+                                android:gravity="center_vertical"
+                                android:text="Tahun : "
+                                android:textColor="#070707"
+                                tools:layout_editor_absoluteX="133dp"
+                                tools:layout_editor_absoluteY="136dp" />
+                            <TextView
+                                android:id="@+id/tahunAPemesanan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/amethysta"
+                                android:gravity="center_vertical"
+                                android:text="2019"
+                                android:textColor="#070707"
+                                tools:layout_editor_absoluteX="133dp"
+                                tools:layout_editor_absoluteY="136dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:fontFamily="@font/amethysta"
+                                android:gravity="center_vertical"
+                                android:text="Unit Tersisa : "
+                                android:textColor="#070707"
+                                tools:layout_editor_absoluteX="133dp"
+                                tools:layout_editor_absoluteY="136dp" />
+                            <TextView
+                                android:id="@+id/jumlahAPemesanan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/amethysta"
+                                android:gravity="center_vertical"
+                                android:text="3"
+                                android:textColor="#070707"
+                                tools:layout_editor_absoluteX="133dp"
+                                tools:layout_editor_absoluteY="136dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/amethysta"
+                        android:gravity="center_vertical"
+                        android:text="Fasilitas : "
+                        android:textColor="#070707"
+                        tools:layout_editor_absoluteX="133dp"
+                        tools:layout_editor_absoluteY="136dp" />
+                    <TextView
+                        android:id="@+id/deskripsiAPemesanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amethysta"
+                        android:gravity="center_vertical"
+                        android:text="AC Tarif Biasa"
+                        android:textColor="#070707"
+                        tools:layout_editor_absoluteX="133dp"
+                        tools:layout_editor_absoluteY="136dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Lokasi Keberangkatan"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="37dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/icon_lokasi"
+                        tools:layout_editor_absoluteX="37dp"
+                        tools:layout_editor_absoluteY="212dp" />
+
+                    <TextView
+                        android:id="@+id/textKeberangkatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/amethysta"
+                        android:text="Surabaya (SUB)"
+                        android:textColor="#0B0A0A"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="103dp"
+                        tools:layout_editor_absoluteY="212dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#8F8B8B"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Lokasi Tujuan"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="37dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/icon_lokasi"
+                        tools:layout_editor_absoluteX="37dp"
+                        tools:layout_editor_absoluteY="212dp" />
+
+                    <TextView
+                        android:id="@+id/textTujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/amethysta"
+                        android:text="Jakarta (JKT)"
+                        android:textColor="#0B0A0A"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="103dp"
+                        tools:layout_editor_absoluteY="212dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#8F8B8B"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Tanggal Berangkat"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="37dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/kalender"
+                        tools:layout_editor_absoluteX="43dp"
+                        tools:layout_editor_absoluteY="372dp" />
+
+                    <TextView
+                        android:id="@+id/tglBerangkat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/amethysta"
+                        android:text="Sabtu, 02/05/2020"
+                        android:textColor="#0B0A0A"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="103dp"
+                        tools:layout_editor_absoluteY="212dp" />
+
+                    <TextView
+                        android:id="@+id/jamBerangkat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/amethysta"
+                        android:text="Pukul 21.00"
+                        android:textColor="#0B0A0A"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="103dp"
+                        tools:layout_editor_absoluteY="212dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#8F8B8B"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Tanggal Pulang"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="37dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/kalender"
+                        tools:layout_editor_absoluteX="43dp"
+                        tools:layout_editor_absoluteY="372dp" />
+
+                    <TextView
+                        android:id="@+id/tglPulang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/amethysta"
+                        android:text="Selasa, 05/05/2020"
+                        android:textColor="#0B0A0A"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="103dp"
+                        tools:layout_editor_absoluteY="212dp" />
+
+                    <TextView
+                        android:id="@+id/jamPulang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/amethysta"
+                        android:text="Pukul 15.00"
+                        android:textColor="#0B0A0A"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="103dp"
+                        tools:layout_editor_absoluteY="212dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#8F8B8B"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:fontFamily="@font/amethysta"
+                        android:text="Jumlah Unit : "
+                        android:textColor="#0C0C0C"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="37dp"
+                        tools:layout_editor_absoluteY="179dp" />
+
+                    <TextView
+                        android:id="@+id/textJumlah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/amethysta"
+                        android:text="3"
+                        android:textColor="#0B0A0A"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="103dp"
+                        tools:layout_editor_absoluteY="212dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#8F8B8B"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Paket Fasilitas"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="37dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+                <RadioButton
+                    android:id="@+id/paket1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Paket Reguler"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Fasilitas Armada"
+                    android:textColor="#0B0A0A"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <RadioButton
+                    android:id="@+id/paket2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Paket Komplet"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Fasilitas Armada"
+                    android:textColor="#0B0A0A"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Makan 3x sehari"
+                    android:textColor="#0B0A0A"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Hotel dan fasilitasnya"
+                    android:textColor="#0B0A0A"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Snack"
+                    android:textColor="#0B0A0A"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#8F8B8B"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Total Biaya"
+                    android:textColor="#0C0C0C"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="37dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+                <TextView
+                    android:id="@+id/textBiaya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/amethysta"
+                    android:text="Rp. 800.000,00"
+                    android:textColor="#E8592D"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="212dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#8F8B8B"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="416dp" />
+
+                <Button
+                    android:id="@+id/btnkonfirm"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:background="#E8592D"
+                    android:fontFamily="@font/amethysta"
+                    android:text="KONFIRMASI"
+                    android:textColor="#FAF7F4"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="85dp"
+                    tools:layout_editor_absoluteY="622dp" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

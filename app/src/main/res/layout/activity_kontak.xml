@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,18 +8,12 @@
     tools:context=".ActivityKontak">
 
     <androidx.appcompat.widget.Toolbar
+        app:title="Kontak"
         android:id="@+id/toolbarKontak"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="Kontak"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"/>
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
@@ -142,7 +137,7 @@
                 android:layout_toRightOf="@id/iconEmailKontak"
                 android:layout_marginTop="12dp"
                 android:layout_marginRight="20dp"
-                android:text="agenttravel@gmail.com"
+                android:text="shikattravelcar@gmail.com"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"/>
 

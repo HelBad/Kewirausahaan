@@ -8,7 +8,7 @@
     tools:context=".FragmentHome">
 
     <androidx.appcompat.widget.Toolbar
-        app:title="@string/app_name"
+        app:title="Shikat Travel Car"
         android:id="@+id/toolbarHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,288 +16,336 @@
         android:minHeight="?attr/actionBarSize">
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:id="@+id/kontenHome1"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerHome"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginHorizontal="10dp"
+        android:layout_height="200dp"
         android:layout_below="@id/toolbarHome">
+    </androidx.viewpager.widget.ViewPager>
 
-        <LinearLayout
-            android:id="@+id/menuHome1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu1" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/jenisArmada1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Minibus Big"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuHome2"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu2" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/jenisArmada2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Minibus Jumbo"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuHome3"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu3" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/jenisArmada3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Minibus Big Jumbo"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuHome4"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu4" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/jenisArmada4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Minibus MC"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/kontenHome2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_below="@id/kontenHome1">
-        <LinearLayout
-            android:id="@+id/menuHome5"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu5" />
-            </androidx.cardview.widget.CardView>
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewpagerHome"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/gradasiHome"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/tool_gradasi" >
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/jenisArmada5"
+            <LinearLayout
+                android:id="@+id/kontenHome1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="10dp">
+
+                <LinearLayout
+                    android:id="@+id/menuHome1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu1" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Minibus Big"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuHome2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu2" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Minibus Jumbo"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuHome3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu3" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Minibus Big Jumbo"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuHome4"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu4" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Minibus MC"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kontenHome2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_below="@id/kontenHome1">
+                <LinearLayout
+                    android:id="@+id/menuHome5"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu5" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Mobil"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuHome6"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu6" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Big Bus SHD"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuHome7"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:addStatesFromChildren="true"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu7" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Big Bus MD"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuHome8"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_menu8" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/jenisArmada8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/amaranth"
+                        android:text="Big Bus HDD"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#666666"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/spaceHome"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#dddddd"
+                android:layout_below="@id/kontenHome2"></RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                app:title="Promo"
+                android:id="@+id/promoHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Mobil"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
+                android:layout_below="@id/spaceHome"
+                android:background="@android:color/white"
+                android:minHeight="?attr/actionBarSize">
+            </androidx.appcompat.widget.Toolbar>
 
-        <LinearLayout
-            android:id="@+id/menuHome6"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu6" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/jenisArmada6"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listPromo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Big Bus SHD"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuHome7"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:addStatesFromChildren="true"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu7" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/jenisArmada7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Big Bus MD"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuHome8"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_menu8" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/jenisArmada8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/amaranth"
-                android:text="Big Bus HDD"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#666666"
-                android:textSize="12sp"></TextView>
-        </LinearLayout>
-    </LinearLayout>
-
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/promoHome">
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

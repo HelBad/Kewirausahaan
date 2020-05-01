@@ -63,7 +63,7 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:text="Th. "
+                    android:text="Tahun "
                     android:textSize="20dp"
                     android:textColor="@color/colorPrimary"
                     android:gravity="center_vertical"
@@ -78,9 +78,18 @@
                     android:layout_marginRight="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <TextView
-                    android:id="@+id/ccArmada"
-                    android:text="1500cc"
+                    android:text="Jumlah Unit : "
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/jumlahArmada"
+                    android:text="5"
                     android:textSize="20dp"
                     android:textColor="@color/colorPrimary"
                     android:gravity="center_vertical"

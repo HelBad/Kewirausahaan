@@ -8,7 +8,7 @@
     tools:context=".FragmentAkun">
 
     <androidx.appcompat.widget.Toolbar
-        app:title="@string/app_name"
+        app:title="Shikat Travel Car"
         android:id="@+id/toolbarAkun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
         android:layout_below="@id/namaAkun"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/gambarProfil"
-        android:text="Masuk dengan Email Agent Travel"
+        android:text="Masuk dengan Email"
         android:textSize="15sp"
         android:textStyle="bold"/>
 
