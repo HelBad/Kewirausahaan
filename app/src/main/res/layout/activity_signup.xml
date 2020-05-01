@@ -55,7 +55,8 @@
                     android:layout_gravity="center">
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
                         <ImageView
                             android:id="@+id/imgSignup"
                             android:layout_width="200dp"
@@ -73,16 +74,6 @@
                             android:backgroundTint="@android:color/white"
                             android:background="@drawable/icon_kamera" />
                     </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/imgView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:textSize="18dp"
-                        android:text=""
-                        android:textColor="@android:color/black" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

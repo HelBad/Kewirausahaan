@@ -45,9 +45,9 @@ class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
         Picasso.get().load(gambar2).into(gambar2Armada)
 }
     //interface to send callbacks
-    interface ClickListener {
-        fun onItemClick(view:View, position:Int)
-        fun onItemLongClick(view:View, position:Int)
+    interface ClickListener : ViewHolderInbox.ClickListener {
+        override fun onItemClick(view:View, position:Int)
+        override fun onItemLongClick(view:View, position:Int)
     }
     fun setOnClickListener(clickListener:ViewHolder.ClickListener) {
         mClickListener = clickListener

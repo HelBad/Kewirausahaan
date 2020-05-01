@@ -35,15 +35,15 @@ class ActivitySignup : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        textNama = findViewById(R.id.textNama) as EditText
-        textEmail = findViewById(R.id.textEmail) as EditText
-        textPassword = findViewById(R.id.textPassword) as EditText
-        textProfesi = findViewById(R.id.textProfesi) as EditText
-        textAlamat = findViewById(R.id.textAlamat) as EditText
-        textTelp = findViewById(R.id.textTelp) as EditText
-        btnSignup = findViewById(R.id.btnSignup) as Button
-        textGender1 = findViewById(R.id.textGender1) as TextView
-        textGender = findViewById(R.id.textGender) as Spinner
+        textNama = findViewById(R.id.textNama)
+        textEmail = findViewById(R.id.textEmail)
+        textPassword = findViewById(R.id.textPassword)
+        textProfesi = findViewById(R.id.textProfesi)
+        textAlamat = findViewById(R.id.textAlamat)
+        textTelp = findViewById(R.id.textTelp)
+        btnSignup = findViewById(R.id.btnSignup)
+        textGender1 = findViewById(R.id.textGender1)
+        textGender = findViewById(R.id.textGender)
         val gender = arrayOf("Laki-laki", "Perempuan")
         textGender.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, gender)
         textGender.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
@@ -90,8 +90,6 @@ class ActivitySignup : AppCompatActivity() {
                         val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, uri)
                         val bitmapDrawable = BitmapDrawable(bitmap)
                         imgSignup.setBackgroundDrawable(bitmapDrawable)
-                        val imgView = findViewById<View>(R.id.imgView) as TextView
-                        imgView.text = url.toString()
                         Toast.makeText(this, "Successfully Uploaded", Toast.LENGTH_SHORT).show()
                     }}
                 } catch(ex:Exception) {

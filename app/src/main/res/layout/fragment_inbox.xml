@@ -16,10 +16,10 @@
         android:minHeight="?attr/actionBarSize">
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerInbox"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbarInbox"
-        android:text="Inbox" />
+        android:layout_below="@id/toolbarInbox"/>
 
 </RelativeLayout>
