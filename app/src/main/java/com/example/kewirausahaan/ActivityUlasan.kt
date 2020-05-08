@@ -9,7 +9,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_ulasan.*
 
 class ActivityUlasan : AppCompatActivity() {
 
@@ -24,22 +23,22 @@ class ActivityUlasan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ulasan)
 
-        textNama = findViewById(R.id.textNama) as TextView
-        textEmail = findViewById(R.id.textEmail) as TextView
-        btnUlas = findViewById(R.id.btnUlas) as Button
-        inputUlasan = findViewById(R.id.inputUlasan) as EditText
+        textNama = findViewById(R.id.textNama)
+        textEmail = findViewById(R.id.textEmail)
+        btnUlas = findViewById(R.id.btnUlas)
+        inputUlasan = findViewById(R.id.inputUlasan)
 
-        databaseReference = FirebaseDatabase.getInstance().getReference()
+        databaseReference = FirebaseDatabase.getInstance().reference
         val query = databaseReference.child("Pengguna").orderByChild("nama").equalTo(intent.getStringExtra("nama"))
         query.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(datasnapshot: DataSnapshot) {
                 if (datasnapshot != null)
                 {
-                    for (snapshot1 in datasnapshot.getChildren())
+                    for (snapshot1 in datasnapshot.children)
                     {
                         val allocation = snapshot1.getValue(Akun::class.java)
-                        textNama.setText(allocation!!.nama)
-                        textEmail.setText(allocation!!.email)
+                        textNama.text = allocation!!.nama
+                        textEmail.text = allocation.email
                     }
                 }
             }

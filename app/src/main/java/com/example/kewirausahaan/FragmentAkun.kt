@@ -25,7 +25,7 @@ class FragmentAkun : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_akun, container, false)
     }
 
@@ -33,10 +33,9 @@ class FragmentAkun : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         alertDialog = AlertDialog.Builder(activity!!)
-
         lihatAkun.setOnClickListener {
             val intent = Intent(activity, ActivityProfil::class.java)
-            intent.putExtra("nama", textNama.getText().toString())
+            intent.putExtra("nama", textNama.text.toString())
             startActivity(intent)
         }
         akun1.setOnClickListener {
@@ -49,7 +48,7 @@ class FragmentAkun : Fragment() {
         }
         akun3.setOnClickListener {
             val intent = Intent(activity, ActivityUlasan::class.java)
-            intent.putExtra("nama", textNama.getText().toString())
+            intent.putExtra("nama", textNama.text.toString())
             startActivity(intent)
         }
         akun5.setOnClickListener {
@@ -71,7 +70,7 @@ class FragmentAkun : Fragment() {
 
         textNama = view!!.findViewById<View>(R.id.namaAkun) as TextView
         imgAkun = view!!.findViewById<View>(R.id.imgAkun) as ImageView
-        databaseReference = FirebaseDatabase.getInstance().getReference()
+        databaseReference = FirebaseDatabase.getInstance().reference
         val query = databaseReference.child("Pengguna").orderByChild("email").equalTo(activity!!.intent.getStringExtra("email"))
         query.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(datasnapshot: DataSnapshot) {

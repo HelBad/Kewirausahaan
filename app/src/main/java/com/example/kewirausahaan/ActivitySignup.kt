@@ -51,7 +51,7 @@ class ActivitySignup : AppCompatActivity() {
                 textGender1.text = "Pilih Jenis Kelamin"
             }
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                textGender1.text = gender.get(position)
+                textGender1.text = gender[position]
             }
         }
 
@@ -81,7 +81,6 @@ class ActivitySignup : AppCompatActivity() {
         if(resultCode == RESULT_OK) {
             if(requestCode == 0) {
                 uri = data!!.data!!
-                var nama = textNama.text.toString()
                 var mStorage = storageReference.child(uri.lastPathSegment!!)
                 try {
                     mStorage.putFile(uri).addOnFailureListener {}.addOnSuccessListener () {
@@ -97,16 +96,6 @@ class ActivitySignup : AppCompatActivity() {
                 }
             }}
     }
-//    fun uploadImage() {
-//        if(selectedPhotoUri == null) return
-//        val filename = textNama.text.toString()
-//        val storage = FirebaseStorage.getInstance().getReference("/Pengguna/$filename")
-//        storage.putFile(selectedPhotoUri!!).addOnSuccessListener {
-//            storage.downloadUrl.addOnSuccessListener {
-//
-//            }
-//        }.addOnFailureListener {  }
-//    }
 
     private fun addData() {
         val nama = textNama.text.toString().trim()

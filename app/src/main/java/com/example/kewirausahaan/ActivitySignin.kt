@@ -30,9 +30,9 @@ class ActivitySignin : AppCompatActivity(), View.OnClickListener {
         }
 
         alertDialog = AlertDialog.Builder(this)
-        textEmail = findViewById<EditText>(R.id.textEmail)
-        textPassword = findViewById<EditText>(R.id.textPassword)
-        btnSignin = findViewById<Button>(R.id.btnSignin)
+        textEmail = findViewById(R.id.textEmail)
+        textPassword = findViewById(R.id.textPassword)
+        btnSignin = findViewById(R.id.btnSignin)
         btnSignin.setOnClickListener(this)
         databaseReference = FirebaseDatabase.getInstance().reference
     }
@@ -53,7 +53,7 @@ class ActivitySignin : AppCompatActivity(), View.OnClickListener {
                     for (user in dataSnapshot.children)
                     {
                         val usersBean = user.getValue(Akun::class.java)
-                        if (usersBean!!.password.equals(textPassword.text.toString().trim()))
+                        if (usersBean!!.password == textPassword.text.toString().trim())
                         {
                             val intent = Intent(applicationContext, ActivityMain::class.java)
                             intent.putExtra("email", textEmail.text.toString())

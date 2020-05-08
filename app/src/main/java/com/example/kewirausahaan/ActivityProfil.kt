@@ -23,30 +23,30 @@ class ActivityProfil : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil)
 
-        textNama = findViewById(R.id.textNama) as TextView
-        textEmail = findViewById(R.id.textEmail) as TextView
-        textJk = findViewById(R.id.textJk) as TextView
-        textAlamat = findViewById(R.id.textAlamat) as TextView
-        textNo = findViewById(R.id.textNo) as TextView
-        textProfesi = findViewById(R.id.textProfesi) as TextView
-        imgProfil = findViewById(R.id.imgProfil) as ImageView
+        textNama = findViewById(R.id.textNama)
+        textEmail = findViewById(R.id.textEmail)
+        textJk = findViewById(R.id.textJk)
+        textAlamat = findViewById(R.id.textAlamat)
+        textNo = findViewById(R.id.textNo)
+        textProfesi = findViewById(R.id.textProfesi)
+        imgProfil = findViewById(R.id.imgProfil)
 
-        databaseReference = FirebaseDatabase.getInstance().getReference()
+        databaseReference = FirebaseDatabase.getInstance().reference
         val query = databaseReference.child("Pengguna").orderByChild("nama").equalTo(intent.getStringExtra("nama"))
         query.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(datasnapshot: DataSnapshot) {
                 if (datasnapshot != null)
                 {
-                    for (snapshot1 in datasnapshot.getChildren())
+                    for (snapshot1 in datasnapshot.children)
                     {
                         val allocation = snapshot1.getValue(Akun::class.java)
-                        textNama.setText(allocation!!.nama)
-                        textEmail.setText(allocation!!.email)
-                        textProfesi.setText(allocation!!.profesi)
-                        textJk.setText(allocation!!.gender)
-                        textAlamat.setText(allocation!!.alamat)
-                        textNo.setText(allocation!!.telp)
-                        Picasso.get().load(allocation!!.gambar).into(imgProfil)
+                        textNama.text = allocation!!.nama
+                        textEmail.text = allocation.email
+                        textProfesi.text = allocation.profesi
+                        textJk.text = allocation.gender
+                        textAlamat.text = allocation.alamat
+                        textNo.text = allocation.telp
+                        Picasso.get().load(allocation.gambar).into(imgProfil)
                     }
                 }
             }

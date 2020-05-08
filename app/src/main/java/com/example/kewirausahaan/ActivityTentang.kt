@@ -2,9 +2,6 @@ package com.example.kewirausahaan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import com.example.kewirausahaan.R
-import kotlinx.android.synthetic.main.activity_tentang.*
 import me.biubiubiu.justifytext.library.JustifyTextView
 
 class ActivityTentang : AppCompatActivity() {
@@ -26,7 +23,7 @@ class ActivityTentang : AppCompatActivity() {
                 "\n" +
                 "KETENTUAN\n" +
                 "       Aplikasi ini merupakan aplikasi yang bersifat local area. Jika Anda memiliki pertanyaan lebih lanjut ataupun keluhan, harap menghubungi Admin.\n")
-        val txtLabel = findViewById(R.id.textBantuan) as JustifyTextView
-        txtLabel.setText(label)
+        val txtLabel = findViewById<JustifyTextView>(R.id.textBantuan)
+        txtLabel.text = label
     }
 }

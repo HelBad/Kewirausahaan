@@ -2,7 +2,6 @@ package com.example.kewirausahaan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_kontak.*
 
 class ActivityKontak : AppCompatActivity() {
 

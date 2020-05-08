@@ -98,7 +98,7 @@ class FragmentHome : Fragment() {
         val listPromo = view!!.findViewById<View>(R.id.listPromo) as RecyclerView
         val image = intArrayOf(R.drawable.promo3, R.drawable.promo2, R.drawable.promo1)
         val manager = LinearLayoutManager(context, LinearLayout.HORIZONTAL, false)
-        listPromo.setLayoutManager(manager)
+        listPromo.layoutManager = manager
         listPromo.adapter = AdapterPromo(image, this.requireContext())
         val snapHelper : SnapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(listPromo)
@@ -120,5 +120,4 @@ class FragmentHome : Fragment() {
             }
         }, DELAY, PERIOD)
     }
-
 }
