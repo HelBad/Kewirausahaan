@@ -2,14 +2,13 @@ package com.example.kewirausahaan
 
 import android.content.Context
 import android.view.View
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
 
 class ViewHolderInbox(itemView:View): RecyclerView.ViewHolder(itemView) {
     internal var mView:View
     private var mClickListener: ClickListener? = null
+
     init{
         mView = itemView
         itemView.setOnClickListener(object: View.OnClickListener {
@@ -37,7 +36,7 @@ class ViewHolderInbox(itemView:View): RecyclerView.ViewHolder(itemView) {
         fun onItemLongClick(view:View, position:Int)
     }
 
-    fun setOnClickListener(clickListener:ViewHolder.ClickListener) {
+    fun setOnClickListener(clickListener:ViewHolderInbox.ClickListener) {
         mClickListener = clickListener
     }
 }

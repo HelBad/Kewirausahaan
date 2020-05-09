@@ -3,15 +3,12 @@ package com.example.kewirausahaan
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
@@ -20,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_armada.*
-import java.io.ByteArrayOutputStream
 
 class ActivityArmada : AppCompatActivity() {
 
@@ -35,17 +31,17 @@ class ActivityArmada : AppCompatActivity() {
         setContentView(R.layout.activity_armada)
 
         setSupportActionBar(toolbarArmada)
-        textbarArmada = findViewById(R.id.textbarArmada) as TextView
+        textbarArmada = findViewById(R.id.textbarArmada)
         databaseReference = FirebaseDatabase.getInstance().getReference("Armada")
         val query = databaseReference.child(intent.getStringExtra("jenis"))
         query.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(datasnapshot: DataSnapshot) {
                 if (datasnapshot != null)
                 {
-                    for (snapshot1 in datasnapshot.getChildren())
+                    for (snapshot1 in datasnapshot.children)
                     {
                         val allocation = snapshot1.getValue(ListArmada::class.java)
-                        textbarArmada.setText(allocation!!.jenis)
+                        textbarArmada.text = allocation!!.jenis
                     }
                 }
             }
@@ -57,19 +53,18 @@ class ActivityArmada : AppCompatActivity() {
         if (mSorting == "a-z")
         {
             mLayoutManager = LinearLayoutManager(this)
-            mLayoutManager.setReverseLayout(true)
-            mLayoutManager.setStackFromEnd(true)
+            mLayoutManager.reverseLayout = false
+            mLayoutManager.stackFromEnd = false
         }
         else if (mSorting == "z-a")
         {
             mLayoutManager = LinearLayoutManager(this)
-            mLayoutManager.setReverseLayout(false)
-            mLayoutManager.setStackFromEnd(false)
+            mLayoutManager.reverseLayout = true
+            mLayoutManager.stackFromEnd = true
         }
-
         mRecyclerView = findViewById(R.id.recyclerArmada)
         mRecyclerView.setHasFixedSize(true)
-        mRecyclerView.setLayoutManager(mLayoutManager)
+        mRecyclerView.layoutManager = mLayoutManager
     }
 
     private fun firebaseSearch(searchText:String) {
@@ -82,7 +77,7 @@ class ActivityArmada : AppCompatActivity() {
             firebaseSearchQuery
         ) {
             override fun populateViewHolder(viewHolder:ViewHolder, model:ListArmada, position:Int) {
-                viewHolder.setDetails(getApplicationContext(), model.tipe, model.tahun, model.jumlah, model.deskripsi, model.gambar1, model.gambar2)
+                viewHolder.setDetails(applicationContext, model.tipe, model.tahun, model.jumlah, model.deskripsi, model.gambar1, model.gambar2)
             }
             override fun onCreateViewHolder(parent: ViewGroup, viewType:Int):ViewHolder {
                 val viewHolder = super.onCreateViewHolder(parent, viewType)
@@ -92,20 +87,18 @@ class ActivityArmada : AppCompatActivity() {
                         val tipeArmada = view.findViewById(R.id.tipeArmada) as TextView
                         val tipeA = tipeArmada.text.toString()
                         val jenisA = textbarArmada.text.toString()
-                        val intent = Intent(view.getContext(), ActivityPemesanan::class.java)
+                        val intent = Intent(view.context, ActivityPemesanan::class.java)
                         intent.putExtra("tipe", tipeA)
                         intent.putExtra("jenis",jenisA)
                         startActivity(intent)
                     }
                     override fun onItemLongClick(view:View, position:Int) {
-
                     }
                 })
                 return viewHolder
             }
         }
-        //set adapter to recyclerview
-        mRecyclerView.setAdapter(firebaseRecyclerAdapter)
+        mRecyclerView.adapter = firebaseRecyclerAdapter
     }
 
     override fun onStart() {
@@ -118,7 +111,7 @@ class ActivityArmada : AppCompatActivity() {
             query
         ) {
             override fun populateViewHolder(viewHolder:ViewHolder, model:ListArmada, position:Int) {
-                viewHolder.setDetails(getApplicationContext(), model.tipe, model.tahun, model.jumlah, model.deskripsi, model.gambar1, model.gambar2)
+                viewHolder.setDetails(applicationContext, model.tipe, model.tahun, model.jumlah, model.deskripsi, model.gambar1, model.gambar2)
             }
             override fun onCreateViewHolder(parent:ViewGroup, viewType:Int):ViewHolder {
                 val viewHolder = super.onCreateViewHolder(parent, viewType)
@@ -128,25 +121,23 @@ class ActivityArmada : AppCompatActivity() {
                         val tipeArmada = view.findViewById(R.id.tipeArmada) as TextView
                         val tipeA = tipeArmada.text.toString()
                         val jenisA = textbarArmada.text.toString()
-                        val intent = Intent(view.getContext(), ActivityPemesanan::class.java)
+                        val intent = Intent(view.context, ActivityPemesanan::class.java)
                         intent.putExtra("tipe", tipeA)
                         intent.putExtra("jenis",jenisA)
                         startActivity(intent)
                     }
                     override fun onItemLongClick(view:View, position:Int) {
-
                     }
                 })
                 return viewHolder
             }
         }
-        //set adapter to recyclerview
-        mRecyclerView.setAdapter(firebaseRecyclerAdapter)
+        mRecyclerView.adapter = firebaseRecyclerAdapter
     }
     override fun onCreateOptionsMenu(menu: Menu):Boolean {
-        getMenuInflater().inflate(R.menu.menu, menu)
+        menuInflater.inflate(R.menu.menu, menu)
         val item = menu.findItem(R.id.action_search)
-        val searchView = item.getActionView() as SearchView
+        val searchView = item.actionView as SearchView
         searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query:String):Boolean {
                 firebaseSearch(query)
@@ -160,7 +151,7 @@ class ActivityArmada : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
     override fun onOptionsItemSelected(item: MenuItem):Boolean {
-        val id = item.getItemId()
+        val id = item.itemId
         if (id == R.id.action_sort)
         {
             showSortDialog()
@@ -169,7 +160,7 @@ class ActivityArmada : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
     private fun showSortDialog() {
-        val sortOptions = arrayOf<String>(" A-Z", " Z-A")
+        val sortOptions = arrayOf(" A-Z", " Z-A")
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Sort by")
             .setIcon(R.drawable.icon_sort)

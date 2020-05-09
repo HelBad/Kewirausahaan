@@ -60,7 +60,7 @@ class ActivityUlasan : AppCompatActivity() {
         if (!TextUtils.isEmpty(ulasan))
         {
             val ulas = Ulasan(nama, email, ulasan)
-            databaseReference.child(nama).setValue(ulas)
+            databaseReference.child(nama + " : " + ulasan).setValue(ulas)
             inputUlasan.setText("")
             Toast.makeText(this@ActivityUlasan, "Data Terkirim", Toast.LENGTH_LONG).show()
         }

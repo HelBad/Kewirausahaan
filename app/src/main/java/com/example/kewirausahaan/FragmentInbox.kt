@@ -1,6 +1,5 @@
 package com.example.kewirausahaan
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,13 +8,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.database.FirebaseRecyclerAdapter
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class FragmentInbox : Fragment() {
 
-    lateinit var mLayoutManager: LinearLayoutManager //for sorting
     lateinit var mRecyclerView: RecyclerView
+    lateinit var mLayoutManager: LinearLayoutManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,10 +26,10 @@ class FragmentInbox : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        mLayoutManager = LinearLayoutManager(activity)
+        mLayoutManager = LinearLayoutManager(activity!!)
         mRecyclerView = view!!.findViewById(R.id.recyclerInbox)
         mRecyclerView.setHasFixedSize(true)
-        mRecyclerView.setLayoutManager(mLayoutManager)
+        mRecyclerView.layoutManager = mLayoutManager
     }
 
     override fun onStart() {
@@ -44,16 +42,14 @@ class FragmentInbox : Fragment() {
             query
         ) {
             override fun populateViewHolder(viewHolder:ViewHolderInbox, model:ListInbox, position:Int) {
-                viewHolder.setDetails(activity!!.getApplicationContext(), model.judul, model.deskripsi)
+                viewHolder.setDetails(activity!!.applicationContext, model.judul, model.deskripsi)
             }
             override fun onCreateViewHolder(parent:ViewGroup, viewType:Int):ViewHolderInbox {
                 val viewHolder = super.onCreateViewHolder(parent, viewType)
-                viewHolder.setOnClickListener(object: ViewHolder.ClickListener {
+                viewHolder.setOnClickListener(object: ViewHolderInbox.ClickListener {
                     override fun onItemClick(view:View, position:Int) {
-
                     }
                     override fun onItemLongClick(view:View, position:Int) {
-
                     }
                 })
                 return viewHolder

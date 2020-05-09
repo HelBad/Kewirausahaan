@@ -13,13 +13,11 @@ class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
 
     init{
         mView = itemView
-        //item click
         itemView.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view:View) {
                 mClickListener!!.onItemClick(view, adapterPosition)
             }
         })
-        //item long click
         itemView.setOnLongClickListener(object: View.OnLongClickListener {
             override fun onLongClick(view:View):Boolean {
                 mClickListener!!.onItemLongClick(view, adapterPosition)
@@ -27,28 +25,28 @@ class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
             }
         })
     }
-    //set details to recycler view row
+
     fun setDetails(ctx: Context, tipe:String, tahun:String, jumlah:String, deskripsi:String, gambar1:String, gambar2:String) {
-        //Views
         val tipeArmada = mView.findViewById(R.id.tipeArmada) as TextView
         val tahunArmada = mView.findViewById(R.id.tahunArmada) as TextView
         val jumlahArmada = mView.findViewById(R.id.jumlahArmada) as TextView
         val deskripsiArmada = mView.findViewById(R.id.deskripsiArmada) as TextView
         val gambar1Armada = mView.findViewById(R.id.gambar1Armada) as ImageView
         val gambar2Armada = mView.findViewById(R.id.gambar2Armada) as ImageView
-        //set data to views
-        tipeArmada.setText(tipe)
-        tahunArmada.setText(tahun)
-        jumlahArmada.setText(jumlah)
-        deskripsiArmada.setText(deskripsi)
+
+        tipeArmada.text = tipe
+        tahunArmada.text = tahun
+        jumlahArmada.text = jumlah
+        deskripsiArmada.text = deskripsi
         Picasso.get().load(gambar1).into(gambar1Armada)
         Picasso.get().load(gambar2).into(gambar2Armada)
-}
-    //interface to send callbacks
-    interface ClickListener : ViewHolderInbox.ClickListener {
-        override fun onItemClick(view:View, position:Int)
-        override fun onItemLongClick(view:View, position:Int)
     }
+
+    interface ClickListener {
+        fun onItemClick(view:View, position:Int)
+        fun onItemLongClick(view:View, position:Int)
+    }
+
     fun setOnClickListener(clickListener:ViewHolder.ClickListener) {
         mClickListener = clickListener
     }

@@ -76,7 +76,7 @@ class FragmentAkun : Fragment() {
             override fun onDataChange(datasnapshot: DataSnapshot) {
                 if (datasnapshot != null)
                 {
-                    for (snapshot1 in datasnapshot.getChildren())
+                    for (snapshot1 in datasnapshot.children)
                     {
                         val allocation = snapshot1.getValue(Akun::class.java)
                         textNama.setText(allocation!!.nama)

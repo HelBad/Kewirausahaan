@@ -83,7 +83,7 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:backgroundTint="@android:color/black"
-                            android:background="@drawable/icon_username" />
+                            android:background="@drawable/icon_person" />
                         <EditText
                             android:id="@+id/textNama"
                             android:layout_width="match_parent"
@@ -104,7 +104,7 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:backgroundTint="@android:color/black"
-                            android:background="@drawable/icon_username" />
+                            android:background="@drawable/nav_inbox" />
                         <EditText
                             android:id="@+id/textEmail"
                             android:layout_width="match_parent"
@@ -147,7 +147,7 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:backgroundTint="@android:color/black"
-                            android:background="@drawable/icon_password" />
+                            android:background="@drawable/icon_profesi" />
                         <EditText
                             android:id="@+id/textProfesi"
                             android:layout_width="match_parent"
@@ -169,7 +169,7 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:backgroundTint="@android:color/black"
-                            android:background="@drawable/icon_password" />
+                            android:background="@drawable/icon_gender" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -206,7 +206,7 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:backgroundTint="@android:color/black"
-                            android:background="@drawable/icon_password" />
+                            android:background="@drawable/nav_home" />
                         <EditText
                             android:id="@+id/textAlamat"
                             android:layout_width="match_parent"
@@ -228,7 +228,7 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:backgroundTint="@android:color/black"
-                            android:background="@drawable/icon_password" />
+                            android:background="@drawable/icon_panggilan" />
                         <EditText
                             android:id="@+id/textTelp"
                             android:layout_width="match_parent"

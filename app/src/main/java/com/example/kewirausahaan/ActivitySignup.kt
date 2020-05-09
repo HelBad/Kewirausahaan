@@ -111,7 +111,7 @@ class ActivitySignup : AppCompatActivity() {
             && !TextUtils.isEmpty(alamat) && !TextUtils.isEmpty(telp) && !TextUtils.isEmpty(gender) && !TextUtils.isEmpty(gambar))
         {
             val add = Akun(nama, email, password, profesi, alamat, telp, gender, gambar)
-            databaseReference.child(nama).setValue(add)
+            databaseReference.child(telp).setValue(add)
             Toast.makeText(this@ActivitySignup, "Data Terkirim", Toast.LENGTH_LONG).show()
         }
         else
