@@ -1,5 +1,6 @@
 package com.example.kewirausahaan
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -66,6 +67,16 @@ class FragmentAktivitas : Fragment() {
                 val viewHolder = super.onCreateViewHolder(parent, viewType)
                 viewHolder.setOnClickListener(object: ViewHolderAktivitas.ClickListener {
                     override fun onItemClick(view:View, position:Int) {
+                        val tipeArmada = view.findViewById(R.id.tipeAAktivitas) as TextView
+                        val tipeA = tipeArmada.text.toString()
+                        val berangkatAktivitas = view.findViewById(R.id.berangkatAktivitas) as TextView
+                        val berangkatAk = berangkatAktivitas.text.toString()
+                        val pemesanAk = pemesanAktivitas.text.toString()
+                        val intent = Intent(view.context, ActivityPembayaran::class.java)
+                        intent.putExtra("tipe", tipeA)
+                        intent.putExtra("tanggal", berangkatAk)
+                        intent.putExtra("nama",pemesanAk)
+                        startActivity(intent)
                     }
                     override fun onItemLongClick(view:View, position:Int) {
                     }
@@ -73,6 +84,6 @@ class FragmentAktivitas : Fragment() {
                 return viewHolder
             }
         }
-        mRecyclerView.setAdapter(firebaseRecyclerAdapter)
+        mRecyclerView.adapter = firebaseRecyclerAdapter
     }
 }
